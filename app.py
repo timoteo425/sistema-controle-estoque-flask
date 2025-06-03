@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 import os
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Sistema de controle de estoque funcionando!'
+    return render_template('index.html')  # Renderiza o template HTML
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
