@@ -1,1 +1,20 @@
-
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Sistema de Estoque{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Controle de Estoque</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Início</a> |
+            <a href="{{ url_for('admin') }}">Painel Admin</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
