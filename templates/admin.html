@@ -1,1 +1,11 @@
+{% extends "base.html" %}
 
+{% block title %}Painel Administrativo{% endblock %}
+
+{% block content %}
+<h2>Painel Administrativo</h2>
+<ul>
+    <li><a href="{{ url_for('cadastro') }}">Cadastrar novo item</a></li>
+    <li><a href="{{ url_for('listar') }}">Listar estoque</a></li>
+</ul>
+{% endblock %}
